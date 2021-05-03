@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Component
+// Component -
 import App from './App';
 
 // Mount function to start up the app
