@@ -18,8 +18,8 @@ export default () => {
         <div>
           <h1>Branch Activate</h1>
 
-          <MarketingApp />
           <Header />
+          <MarketingApp />
         </div>
       </StylesProvider>
     </BrowserRouter>
