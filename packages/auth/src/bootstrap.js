@@ -33,7 +33,7 @@ const mount = (el, { onNavigate, defaultHistory }) => {
 
 // call mount immediately - DEV
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root');
+  const devRoot = document.querySelector('#_auth-dev-root'); // Selector HTML
 
   if (devRoot) {
     mount(devRoot, { defaultHistory: createBrowserHistory() }); // Fix Route
