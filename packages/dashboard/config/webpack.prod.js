@@ -8,14 +8,14 @@ const prodConfig = {
   output: {
     filename: '[name].[contenthash].js',
     // points to the correct path on s3/cloudfront
-    publicPath: '/marketing/latest/',
+    publicPath: '/dashboard/latest/',
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'marketing',
+      name: 'dashboard',
       filename: 'remoteEntry.js',
       exposes: {
-        './MarketingApp': './src/bootstrap',
+        './DashboardApp': './src/bootstrap',
       },
       shared: packageJson.dependencies,
     }),

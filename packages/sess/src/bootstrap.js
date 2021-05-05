@@ -4,7 +4,8 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
 // Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn }) => {
+  // onSignIn from container
   const history =
     defaultHistory ||
     createMemoryHistory({
@@ -15,7 +16,8 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     history.listen(onNavigate);
   }
 
-  ReactDOM.render(<App history={history} />, el);
+  // Pass onSignIn to App and Routing
+  ReactDOM.render(<App onSignIn={onSignIn} history={history} />, el);
 
   return {
     // parent with navigation
@@ -30,11 +32,11 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
 // If development
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root');
+  const devRoot = document.querySelector('#_auth-dev-root');
 
   if (devRoot) {
     mount(devRoot, {
-      // use browser history when in isolation mode
+      // browser history
       defaultHistory: createBrowserHistory(),
       onNavigate: ({ pathname }) => {
         console.log('called onNavigation with:', pathname);

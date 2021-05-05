@@ -4,8 +4,6 @@ module.exports = {
   module: {
     rules: [
       {
-        // Loader - Babel 2016 + to regular code
-
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {

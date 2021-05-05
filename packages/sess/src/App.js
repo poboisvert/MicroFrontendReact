@@ -1,28 +1,33 @@
 import React from 'react';
 import { Switch, Route, Router } from 'react-router-dom';
+
+// M-UI
 import {
   StylesProvider,
   createGenerateClassName,
 } from '@material-ui/core/styles';
 
-import Landing from './components/Landing';
-import Pricing from './components/Pricing';
+import Signup from './components/Signup';
+import SignIn from './components/Signin';
 
 const generateClassName = createGenerateClassName({
   // Keep CSS unique for each component
-
-  productionPrefix: 'ma',
+  productionPrefix: 'sess',
 });
 
-export default ({ history }) => {
+export default ({ history, onSignIn }) => {
+  // bootstrap js
   return (
     <div>
-      {/* Memory Router Only */}
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
-            <Route exact path='/pricing' component={Pricing} />
-            <Route path='/' component={Landing} />
+            <Route path='/session/signin'>
+              <SignIn onSignIn={onSignIn} />
+            </Route>
+            <Route path='/session/signup'>
+              <Signup onSignIn={onSignIn} />
+            </Route>
           </Switch>
         </Router>
       </StylesProvider>
