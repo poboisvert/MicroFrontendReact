@@ -17,11 +17,11 @@ const devConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'sess', // global variable
+      name: 'session', // global variable
       filename: 'remoteEntry.js', // file we want to make public to import name
       exposes: {
-        // Reuqest for "URL/AuthApp" redirect src/bootstrap file - import sequence optimization
-        './SessApp': './src/bootstrap',
+        // Req for "URL/AuthApp" redirect src/bootstrap file - import sequence optimization
+        './SessionApp': './src/bootstrap',
       },
       // designates which libraries should be shared between this package and other modules
       shared: packageJson.dependencies,

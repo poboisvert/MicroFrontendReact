@@ -20,7 +20,7 @@ const devConfig = {
       name: 'container', // Not required
       remotes: {
         marketing: 'marketing@http://localhost:8081/remoteEntry.js',
-        sess: 'sess@http://localhost:8082/remoteEntry.js', // path and rename sess: for container
+        session: 'session@http://localhost:8082/remoteEntry.js', // path and rename sess: for container
         dashboard: 'dashboard@http://localhost:8083/remoteEntry.js',
       },
       // lin to import

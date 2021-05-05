@@ -11,7 +11,7 @@ import Signup from './components/Signup';
 import SignIn from './components/Signin';
 
 const generateClassName = createGenerateClassName({
-  // Keep CSS unique for each component
+  // Keep CSS unique - each component
   productionPrefix: 'sess',
 });
 

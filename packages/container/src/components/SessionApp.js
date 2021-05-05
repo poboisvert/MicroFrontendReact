@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-// AuthApp is public exposed name on  ModuleFederationPluginn
-import { mount } from 'sess/SessApp'; // sess is   name: 'sess', // global variable in auth/config/webpack
+// AuthApp is public exposed name on  ModuleFederationPlugin
+import { mount } from 'session/SessionApp'; // sess is   name: 'sess', // global variable in auth/config/webpack
 
 export default ({ onSignIn }) => {
   const ref = useRef(null);

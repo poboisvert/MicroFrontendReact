@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
-// defined in CI/CD
+// defined in CI/CD - Domain Name
 const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
@@ -17,7 +17,7 @@ const prodConfig = {
       name: 'container', // technically optional - the host module
       remotes: {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
-        sess: `sess@${domain}/sess/latest/remoteEntry.js`,
+        session: `session@${domain}/session/latest/remoteEntry.js`,
         dashboard: `dashboard@${domain}/dashboard/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,

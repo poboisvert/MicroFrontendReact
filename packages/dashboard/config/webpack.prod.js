@@ -7,7 +7,6 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    // points to the correct path on s3/cloudfront
     publicPath: '/dashboard/latest/',
   },
   plugins: [

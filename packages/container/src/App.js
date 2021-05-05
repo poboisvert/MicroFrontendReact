@@ -10,7 +10,7 @@ import { createBrowserHistory } from 'history';
 import Header from './components/Header';
 
 const MarketingApp = lazy(() => import('./components/MarketingApp'));
-const AuthApp = lazy(() => import('./components/AuthApp'));
+const SessionApp = lazy(() => import('./components/SessionApp'));
 const DashboardApp = lazy(() => import('./components/DashboardApp'));
 
 const generateClassName = createGenerateClassName({
@@ -41,7 +41,7 @@ export default () => {
           <Suspense fallback={<div>Loading</div>}>
             <Switch>
               <Route path='/session'>
-                <AuthApp onSignIn={() => setIsSignedIn(true)} />
+                <SessionApp onSignIn={() => setIsSignedIn(true)} />
               </Route>
               <Route path='/dashboard'>
                 {!isSignedIn && <Redirect path='/' />}

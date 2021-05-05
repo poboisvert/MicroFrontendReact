@@ -11,10 +11,10 @@ const prodConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'sess',
+      name: 'session',
       filename: 'remoteEntry.js',
       exposes: {
-        './SessApp': './src/bootstrap', // Rename to import
+        './SessionApp': './src/bootstrap',
       },
       shared: packageJson.dependencies,
     }),
