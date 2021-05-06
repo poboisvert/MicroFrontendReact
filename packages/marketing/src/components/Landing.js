@@ -12,16 +12,7 @@ import MaterialLink from '@material-ui/core/Link';
 import { Link } from 'react-router-dom';
 
 function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <MaterialLink component={Link} to="/" color="inherit">
-        Your Website
-      </MaterialLink>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+  return <div>Website</div>;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -71,20 +62,20 @@ export default function Album() {
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container maxWidth='sm'>
             <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
+              component='h1'
+              variant='h2'
+              align='center'
+              color='textPrimary'
               gutterBottom
             >
               Home Page
             </Typography>
             <Typography
-              variant="h5"
-              align="center"
-              color="textSecondary"
+              variant='h5'
+              align='center'
+              color='textSecondary'
               paragraph
             >
               Something short and leading about the collection below—its
@@ -92,18 +83,11 @@ export default function Album() {
               short so folks don&apos;t simply skip over it entirely.
             </Typography>
             <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
+              <Grid container spacing={2} justify='center'>
                 <Grid item>
-                  <Link to="/pricing">
-                    <Button variant="contained" color="primary">
-                      Pricing
-                    </Button>
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link to="/pricing">
-                    <Button variant="outlined" color="primary">
-                      Pricing
+                  <Link to='/pricing'>
+                    <Button variant='contained' color='primary'>
+                      See the discounts!
                     </Button>
                   </Link>
                 </Grid>
@@ -111,7 +95,7 @@ export default function Album() {
             </div>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth='md'>
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
@@ -119,11 +103,11 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
+                    image='https://source.unsplash.com/random'
+                    title='Image title'
                   />
                   <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant='h5' component='h2'>
                       Heading
                     </Typography>
                     <Typography>
@@ -132,10 +116,10 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size='small' color='primary'>
                       View
                     </Button>
-                    <Button size="small" color="primary">
+                    <Button size='small' color='primary'>
                       Edit
                     </Button>
                   </CardActions>
@@ -147,14 +131,14 @@ export default function Album() {
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography variant='h6' align='center' gutterBottom>
           Footer
         </Typography>
         <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
+          variant='subtitle1'
+          align='center'
+          color='textSecondary'
+          component='p'
         >
           Something here to give the footer a purpose!
         </Typography>
